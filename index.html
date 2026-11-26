@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishva Visuals — Cinematic Videos, Reels &amp; Brand Promotions</title>
+  <meta
+    name="description"
+    content="Vishva Visuals by Vishvjeet Singh Ganda — Cinematic videos, reels editing, business &amp; brand promotions, local events, and creative shoots in Narmadapuram, MP."
+  />
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+  <!-- Preloader Curtain -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-top">
+        <span class="mono-tag">VISHVA VISUALS</span>
+        <span class="mono-tag">PORTFOLIO / 2026</span>
+      </div>
+      <div class="preloader-center">
+        <div class="preloader-count" id="preloaderCount">00</div>
+      </div>
+      <div class="preloader-bottom">
+        <div class="preloader-track">
+          <div class="preloader-fill" id="preloaderBar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="preloader-curtain preloader-curtain--top"></div>
+    <div class="preloader-curtain preloader-curtain--bottom"></div>
+  </div>
+
+  <!-- Interactive Ambient Background Canvas & Grain -->
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <a href="#hero" class="brand-mark magnetic" data-strength="0.25" data-cursor="HOME">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-text" data-config="brandName">VISHVA VISUALS</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#work" class="nav-link magnetic" data-strength="0.2">
+        <span class="nav-link-inner" data-text="Reels">Reels</span>
+      </a>
+      <a href="#about" class="nav-link magnetic" data-strength="0.2">
+        <span class="nav-link-inner" data-text="Services">Services</span>
+      </a>
+      <a href="#contact" class="nav-link magnetic" data-strength="0.2">
+        <span class="nav-link-inner" data-text="Contact">Contact</span>
+      </a>
+    </nav>
+
+    <div class="header-meta">
+      <span class="status-pill">
+        <span class="status-pulse" aria-hidden="true"></span>
+        <span>Narmadapuram, MP</span>
+      </span>
+      <span class="mono-tag live-clock" id="liveClock">--:--</span>
+    </div>
+  </header>
+
+  <main id="smoothContent">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container hero-container">
+        <div class="hero-eyebrow reveal-fade">
+          <span class="mono-tag">00 / CINEMATIC VIDEOS · REELS EDITING · BRAND PROMOTIONS</span>
+          <span class="hairline-grow" aria-hidden="true"></span>
+        </div>
+
+        <h1 class="hero-title" aria-label="Vishva Visuals">
+          <span class="title-line">
+            <span class="split-reveal" style="--delay: 0.08s">VISHVA</span>
+          </span>
+          <span class="title-line title-line--offset">
+            <span class="split-reveal hero-serif" style="--delay: 0.2s">VISUALS</span>
+          </span>
+        </h1>
+
+        <div class="hero-footer">
+          <p class="hero-lead reveal-fade" style="--delay: 0.35s">
+            Visual storytelling by Vishvjeet Singh Ganda — crafting commercial reels, aerial stories, local event films, and creative shoots from Narmadapuram, MP.
+          </p>
+
+          <div class="hero-actions reveal-fade" style="--delay: 0.45s">
+            <a href="#work" class="cta-pill magnetic" data-strength="0.35" data-cursor="REELS">
+              <span class="cta-pill-bg" aria-hidden="true"></span>
+              <span class="cta-pill-text">Explore Reels</span>
+              <span class="cta-arrow" aria-hidden="true">↘</span>
+            </a>
+
+            <a href="#contact" class="scroll-cue magnetic" data-strength="0.25" aria-label="Jump to contact">
+              <span class="mono-tag">BOOK SHOOT</span>
+              <span class="scroll-line" aria-hidden="true"><span></span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Velocity-Reactive Kinetic Marquee -->
+    <section class="marquee-section" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <div class="marquee-group">
+          <span>VISHVA VISUALS</span>
+          <span class="marquee-sep">✦</span>
+          <span class="marquee-serif">Cinematic Videos</span>
+          <span class="marquee-sep">✦</span>
+          <span>REELS EDITING</span>
+          <span class="marquee-sep">✦</span>
+          <span class="marquee-serif">Brand Promotions</span>
+          <span class="marquee-sep">✦</span>
+          <span>CREATIVE SHOOTS</span>
+          <span class="marquee-sep">✦</span>
+        </div>
+        <div class="marquee-group">
+          <span>VISHVA VISUALS</span>
+          <span class="marquee-sep">✦</span>
+          <span class="marquee-serif">Cinematic Videos</span>
+          <span class="marquee-sep">✦</span>
+          <span>REELS EDITING</span>
+          <span class="marquee-sep">✦</span>
+          <span class="marquee-serif">Brand Promotions</span>
+          <span class="marquee-sep">✦</span>
+          <span>CREATIVE SHOOTS</span>
+          <span class="marquee-sep">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Instagram Reels Portfolio -->
+    <section id="work" class="work section">
+      <div class="container">
+        <div class="portfolio-header-row reveal-fade">
+          <div class="section-header portfolio-section-header">
+            <span class="mono-tag">01 / INSTAGRAM REELS PORTFOLIO</span>
+            <h2 class="section-title">
+              Curated <span class="serif-italic">reels &amp; visual styles</span>
+            </h2>
+          </div>
+
+          <div class="filter-bar" id="portfolioFilters" role="tablist" aria-label="Filter reels by style">
+            <button type="button" class="filter-btn is-active magnetic" data-filter="all" data-strength="0.2" role="tab" aria-selected="true">
+              All (07)
+            </button>
+            <button type="button" class="filter-btn magnetic" data-filter="commercial" data-strength="0.2" role="tab" aria-selected="false">
+              Commercial
+            </button>
+            <button type="button" class="filter-btn magnetic" data-filter="documentary" data-strength="0.2" role="tab" aria-selected="false">
+              Aerial / Doc
+            </button>
+            <button type="button" class="filter-btn magnetic" data-filter="events" data-strength="0.2" role="tab" aria-selected="false">
+              Events &amp; Street
+            </button>
+            <button type="button" class="filter-btn magnetic" data-filter="festive" data-strength="0.2" role="tab" aria-selected="false">
+              Festive &amp; Type
+            </button>
+          </div>
+        </div>
+
+        <div class="work-grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- Philosophy / Services Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <span class="mono-tag">02 / STUDIO FOCUS</span>
+        </div>
+
+        <p class="scrub-statement" id="scrubStatement">
+          Every reel is cut for emotion and impact. From moody product commercials to high-energy convoys and local cultural stories, Vishva Visuals turns everyday moments into cinema.
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-item reveal-fade" style="--delay: 0.05s">
+            <span class="mono-tag">01</span>
+            <h3>Cinematic Videos &amp; Reels</h3>
+            <p>Rhythmic editing, sound design, and color grading tailored for high-retention Instagram reels.</p>
+          </div>
+          <div class="pillar-item reveal-fade" style="--delay: 0.15s">
+            <span class="mono-tag">02</span>
+            <h3>Business &amp; Brand Promotions</h3>
+            <p>Product spotlights and commercial campaigns built to make local and modern brands stand out.</p>
+          </div>
+          <div class="pillar-item reveal-fade" style="--delay: 0.25s">
+            <span class="mono-tag">03</span>
+            <h3>Local Events &amp; Creative Shoots</h3>
+            <p>Dynamic coverage for cultural gatherings, festivals, and custom shoots in Narmadapuram, MP.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <span class="mono-tag">03 / DIRECT CONTACT</span>
+          <h2 class="contact-headline">
+            Let’s create something <span class="serif-italic">unforgettable.</span>
+          </h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Name -->
+          <div class="contact-card spotlight-card reveal-fade" style="--delay: 0.05s">
+            <div class="contact-card-head">
+              <span class="mono-tag">NAME</span>
+              <span class="contact-badge mono-tag">FOUNDER</span>
+            </div>
+            <div class="contact-value-row">
+              <p class="contact-value" data-config="ownerName">Vishvjeet Singh Ganda</p>
+            </div>
+            <p class="contact-sub">Creative Director · <span data-config="brandName">Vishva Visuals</span></p>
+          </div>
+
+          <!-- Contact Number (Redirects to WhatsApp) -->
+          <div class="contact-card spotlight-card reveal-fade" style="--delay: 0.12s" data-cursor="WHATSAPP">
+            <div class="contact-card-head">
+              <span class="mono-tag">CONTACT NUMBER</span>
+              <button
+                type="button"
+                class="copy-btn magnetic"
+                id="copyPhoneBtn"
+                data-strength="0.25"
+                data-cursor="COPY"
+                aria-label="Copy contact number"
+              >
+                Copy
+              </button>
+            </div>
+            <div class="contact-value-row">
+              <a
+                href="https://wa.me/918815493294"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+                data-config="phoneHref"
+              >
+                <span data-config="phoneDisplay">+91 88154 93294</span>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <p class="contact-sub">Tap number for paid promotions &amp; bookings on WhatsApp</p>
+          </div>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/vishva_visuals?utm_source=ig_web_button_share_sheet&amp;gwpx=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card contact-card--interactive spotlight-card reveal-fade"
+            style="--delay: 0.19s"
+            data-config="instagramHref"
+            data-cursor="OPEN"
+          >
+            <div class="contact-card-head">
+              <span class="mono-tag">INSTAGRAM</span>
+              <span class="link-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="contact-value-row">
+              <p class="contact-value" data-config="instagramHandle">@vishva_visuals</p>
+            </div>
+            <p class="contact-sub">Watch all reels, shoots &amp; latest edits</p>
+          </a>
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/918815493294"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card contact-card--interactive contact-card--accent spotlight-card reveal-fade"
+            style="--delay: 0.26s"
+            data-config="whatsappHref"
+            data-cursor="CHAT"
+          >
+            <div class="contact-card-head">
+              <span class="mono-tag">WHATSAPP</span>
+              <span class="link-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="contact-value-row">
+              <p class="contact-value" data-config="whatsappDisplay">+91 88154 93294</p>
+            </div>
+            <p class="contact-sub">Instant project chat &amp; bookings</p>
+          </a>
+        </div>
+
+        <!-- Minimalist Quick WhatsApp Message Bar -->
+        <form class="wa-composer spotlight-card reveal-fade" id="waComposerForm" style="--delay: 0.32s">
+          <label for="waMessageInput" class="mono-tag wa-label">QUICK WHATSAPP BRIEF</label>
+          <div class="wa-input-row">
+            <input
+              id="waMessageInput"
+              type="text"
+              placeholder="Hi Vishvjeet, I’d love to book a reel / brand promotion shoot..."
+              autocomplete="off"
+            />
+            <button type="submit" class="cta-pill magnetic" data-strength="0.28" data-cursor="SEND">
+              <span class="cta-pill-bg" aria-hidden="true"></span>
+              <span class="cta-pill-text">Send on WhatsApp</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimalist Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="mono-tag">© <span id="footerYear">2026</span> VISHVA VISUALS</span>
+      <span class="mono-tag footer-center">NARMADAPURAM, MP · MINIMALISM IN MOTION</span>
+      <button type="button" class="back-to-top magnetic" id="backToTop" data-strength="0.3" data-cursor="TOP">
+        Back to Top ↑
+      </button>
+    </div>
+  </footer>
+
+  <!-- Interactive Reel Preview Modal -->
+  <div class="reel-modal" id="reelModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reelModalTitle">
+    <div class="reel-modal-backdrop" id="reelModalBackdrop"></div>
+    <div class="reel-modal-dialog">
+      <div class="reel-modal-head">
+        <div>
+          <span class="mono-tag" id="reelModalCategory">CATEGORY</span>
+          <h3 id="reelModalTitle">Reel Preview</h3>
+        </div>
+        <button type="button" class="reel-modal-close magnetic" id="reelModalClose" data-strength="0.25" data-cursor="CLOSE" aria-label="Close reel preview">
+          Close ✕
+        </button>
+      </div>
+
+      <div class="reel-embed-frame">
+        <iframe
+          id="reelEmbedIframe"
+          title="Instagram Reel Preview"
+          allowtransparency="true"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="reel-modal-foot">
+        <span class="mono-tag">If embed is restricted by Instagram, open directly:</span>
+        <a id="reelModalExternal" href="#" target="_blank" rel="noopener noreferrer" class="cta-pill magnetic" data-strength="0.25" data-cursor="OPEN">
+          <span class="cta-pill-bg" aria-hidden="true"></span>
+          <span class="cta-pill-text">Watch on Instagram</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy Feedback Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    Number copied to clipboard
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
