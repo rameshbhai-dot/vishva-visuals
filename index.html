@@ -58,9 +58,6 @@
     </a>
 
     <nav class="site-nav" aria-label="Primary">
-      <a href="#work" class="nav-link magnetic" data-strength="0.2">
-        <span class="nav-link-inner" data-text="Reels">Reels</span>
-      </a>
       <a href="#about" class="nav-link magnetic" data-strength="0.2">
         <span class="nav-link-inner" data-text="Services">Services</span>
       </a>
@@ -102,14 +99,14 @@
           </p>
 
           <div class="hero-actions reveal-fade" style="--delay: 0.45s">
-            <a href="#work" class="cta-pill magnetic" data-strength="0.35" data-cursor="REELS">
+            <a href="#contact" class="cta-pill magnetic" data-strength="0.35" data-cursor="CONNECT">
               <span class="cta-pill-bg" aria-hidden="true"></span>
-              <span class="cta-pill-text">Explore Reels</span>
+              <span class="cta-pill-text">Start a Project</span>
               <span class="cta-arrow" aria-hidden="true">↘</span>
             </a>
 
-            <a href="#contact" class="scroll-cue magnetic" data-strength="0.25" aria-label="Jump to contact">
-              <span class="mono-tag">BOOK SHOOT</span>
+            <a href="#about" class="scroll-cue magnetic" data-strength="0.25" aria-label="Scroll to studio focus">
+              <span class="mono-tag">SCROLL</span>
               <span class="scroll-line" aria-hidden="true"><span></span></span>
             </a>
           </div>
@@ -147,45 +144,11 @@
       </div>
     </section>
 
-    <!-- Curated Instagram Reels Portfolio -->
-    <section id="work" class="work section">
-      <div class="container">
-        <div class="portfolio-header-row reveal-fade">
-          <div class="section-header portfolio-section-header">
-            <span class="mono-tag">01 / INSTAGRAM REELS PORTFOLIO</span>
-            <h2 class="section-title">
-              Curated <span class="serif-italic">reels &amp; visual styles</span>
-            </h2>
-          </div>
-
-          <div class="filter-bar" id="portfolioFilters" role="tablist" aria-label="Filter reels by style">
-            <button type="button" class="filter-btn is-active magnetic" data-filter="all" data-strength="0.2" role="tab" aria-selected="true">
-              All (07)
-            </button>
-            <button type="button" class="filter-btn magnetic" data-filter="commercial" data-strength="0.2" role="tab" aria-selected="false">
-              Commercial
-            </button>
-            <button type="button" class="filter-btn magnetic" data-filter="documentary" data-strength="0.2" role="tab" aria-selected="false">
-              Aerial / Doc
-            </button>
-            <button type="button" class="filter-btn magnetic" data-filter="events" data-strength="0.2" role="tab" aria-selected="false">
-              Events &amp; Street
-            </button>
-            <button type="button" class="filter-btn magnetic" data-filter="festive" data-strength="0.2" role="tab" aria-selected="false">
-              Festive &amp; Type
-            </button>
-          </div>
-        </div>
-
-        <div class="work-grid" id="portfolioGrid"></div>
-      </div>
-    </section>
-
     <!-- Philosophy / Services Section -->
     <section id="about" class="about section">
       <div class="container">
         <div class="section-header reveal-fade">
-          <span class="mono-tag">02 / STUDIO FOCUS</span>
+          <span class="mono-tag">01 / STUDIO FOCUS</span>
         </div>
 
         <p class="scrub-statement" id="scrubStatement">
@@ -216,7 +179,7 @@
     <section id="contact" class="contact section">
       <div class="container">
         <div class="section-header reveal-fade">
-          <span class="mono-tag">03 / DIRECT CONTACT</span>
+          <span class="mono-tag">02 / DIRECT CONTACT</span>
           <h2 class="contact-headline">
             Let’s create something <span class="serif-italic">unforgettable.</span>
           </h2>
@@ -337,41 +300,6 @@
       </button>
     </div>
   </footer>
-
-  <!-- Interactive Reel Preview Modal -->
-  <div class="reel-modal" id="reelModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reelModalTitle">
-    <div class="reel-modal-backdrop" id="reelModalBackdrop"></div>
-    <div class="reel-modal-dialog">
-      <div class="reel-modal-head">
-        <div>
-          <span class="mono-tag" id="reelModalCategory">CATEGORY</span>
-          <h3 id="reelModalTitle">Reel Preview</h3>
-        </div>
-        <button type="button" class="reel-modal-close magnetic" id="reelModalClose" data-strength="0.25" data-cursor="CLOSE" aria-label="Close reel preview">
-          Close ✕
-        </button>
-      </div>
-
-      <div class="reel-embed-frame">
-        <iframe
-          id="reelEmbedIframe"
-          title="Instagram Reel Preview"
-          allowtransparency="true"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
-
-      <div class="reel-modal-foot">
-        <span class="mono-tag">If embed is restricted by Instagram, open directly:</span>
-        <a id="reelModalExternal" href="#" target="_blank" rel="noopener noreferrer" class="cta-pill magnetic" data-strength="0.25" data-cursor="OPEN">
-          <span class="cta-pill-bg" aria-hidden="true"></span>
-          <span class="cta-pill-text">Watch on Instagram</span>
-          <span class="cta-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <!-- Copy Feedback Toast -->
   <div class="toast" id="toast" role="status" aria-live="polite">

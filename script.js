@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * VISHVA VISUALS — EDIT YOUR DETAILS & REELS HERE
+ * VISHVA VISUALS — EDIT YOUR DETAILS HERE
  * ============================================================
  */
 const SITE_CONFIG = {
@@ -14,101 +14,6 @@ const SITE_CONFIG = {
   whatsappDisplay: '+91 88154 93294',
   whatsappNumber: '918815493294', // Country code + number, digits only
 };
-
-/**
- * Curated Instagram Reels from @vishva_visuals across distinct visual genres.
- */
-const REELS_PORTFOLIO = [
-  {
-    id: 'DgEoua_B1e2',
-    index: 'TOP · 2.1M',
-    filter: 'festive',
-    category: 'Most Viewed · 2.1M',
-    title: 'Guru Nanak Jayanti · Golden Temple',
-    date: 'Nov 22, 2026',
-    views: '2.1M Views',
-    likes: '158.4K Likes',
-    featured: true,
-    description:
-      'Most-watched reel on @vishva_visuals — celebrating Shri Guru Nanak Dev Ji’s Prakash Purab at the sacred Golden Temple with glowing night devotion and Gurbani.',
-    artClass: 'reel-art--goldentemple',
-    url: 'https://www.instagram.com/vishva_visuals/reel/DgEoua_B1e2/',
-  },
-  {
-    id: 'Df4u-b4NuLK',
-    index: '002',
-    filter: 'commercial',
-    category: 'Brand Commercial',
-    title: 'Beardo Godfather',
-    date: 'Nov 18, 2026',
-    description:
-      'Moody dark-studio product commercial featuring atmospheric smoke, specular bottle lighting, and luxury pacing.',
-    artClass: 'reel-art--perfume',
-    url: 'https://www.instagram.com/vishva_visuals/reel/Df4u-b4NuLK/',
-  },
-  {
-    id: 'Df82HmfhyN3',
-    index: '003',
-    filter: 'documentary',
-    category: 'Aerial & Convoy',
-    title: 'Gandhi Sagar — New Era',
-    date: 'Nov 19, 2026',
-    description:
-      'High-scale convoy and terrain storytelling capturing energy infrastructure across Gandhi Sagar, Madhya Pradesh.',
-    artClass: 'reel-art--aerial',
-    url: 'https://www.instagram.com/vishva_visuals/reel/Df82HmfhyN3/',
-  },
-  {
-    id: 'DgDPMpQB1rP',
-    index: '004',
-    filter: 'events',
-    category: 'Local Event Film',
-    title: 'Sacred Procession',
-    date: 'Nov 22, 2026',
-    views: '2,875 Views',
-    description:
-      'Vibrant daytime street coverage capturing community warmth, movement, and ceremonial rhythm.',
-    artClass: 'reel-art--procession',
-    url: 'https://www.instagram.com/vishva_visuals/reel/DgDPMpQB1rP/',
-  },
-  {
-    id: 'DgHX612hrKE',
-    index: '005',
-    filter: 'events',
-    category: 'Street Storytelling',
-    title: 'Temple Lane Chronicles',
-    date: 'Nov 23, 2026',
-    views: '1,214 Views',
-    description:
-      'Candid handheld street cinema documenting swelling crowds and authentic devotional energy.',
-    artClass: 'reel-art--street',
-    url: 'https://www.instagram.com/vishva_visuals/reel/DgHX612hrKE/',
-  },
-  {
-    id: 'DflonRrtXs3',
-    index: '006',
-    filter: 'festive',
-    category: 'Festive & Typography',
-    title: 'Bhai Dooj Nocturne',
-    date: 'Nov 10, 2026',
-    description:
-      'Crimson night-sky fireworks paired with emotional Hindi kinetic typography and atmospheric glow.',
-    artClass: 'reel-art--fireworks',
-    url: 'https://www.instagram.com/vishva_visuals/reel/DflonRrtXs3/',
-  },
-  {
-    id: 'DfxJ4yvT65O',
-    index: '007',
-    filter: 'festive',
-    category: 'Cultural Highlight',
-    title: 'Chhath Mahaparv · MP',
-    date: 'Nov 15, 2026',
-    description:
-      'Minimalist night-frame cultural reel celebrating Chhath Mahaparv in Narmadapuram.',
-    artClass: 'reel-art--chhath',
-    url: 'https://www.instagram.com/vishva_visuals/reel/DfxJ4yvT65O/',
-  },
-];
 
 (() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -157,128 +62,7 @@ const REELS_PORTFOLIO = [
   }
 
   /* ----------------------------------------------------------
-     2. Render & Filter Reels Portfolio
-     ---------------------------------------------------------- */
-  function initPortfolio() {
-    const grid = document.getElementById('portfolioGrid');
-    const filterBar = document.getElementById('portfolioFilters');
-    const modal = document.getElementById('reelModal');
-    const modalClose = document.getElementById('reelModalClose');
-    const modalBackdrop = document.getElementById('reelModalBackdrop');
-    const modalTitle = document.getElementById('reelModalTitle');
-    const modalCategory = document.getElementById('reelModalCategory');
-    const modalIframe = document.getElementById('reelEmbedIframe');
-    const modalExternal = document.getElementById('reelModalExternal');
-
-    if (!grid) return;
-
-    function openReelModal(reel) {
-      if (!modal || !modalIframe) {
-        window.open(reel.url, '_blank', 'noopener,noreferrer');
-        return;
-      }
-      if (modalTitle) modalTitle.textContent = reel.title;
-      if (modalCategory) modalCategory.textContent = `${reel.category} · ${reel.date}`;
-      if (modalExternal) modalExternal.setAttribute('href', reel.url);
-      modalIframe.setAttribute('src', `https://www.instagram.com/reel/${reel.id}/embed/`);
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('modal-open');
-    }
-
-    function closeReelModal() {
-      if (!modal) return;
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('modal-open');
-      if (modalIframe) modalIframe.setAttribute('src', 'about:blank');
-    }
-
-    if (modalClose) modalClose.addEventListener('click', closeReelModal);
-    if (modalBackdrop) modalBackdrop.addEventListener('click', closeReelModal);
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
-        closeReelModal();
-      }
-    });
-
-    function renderCards(filterKey) {
-      grid.classList.toggle('is-all', filterKey === 'all');
-
-      const filtered =
-        filterKey === 'all'
-          ? REELS_PORTFOLIO
-          : REELS_PORTFOLIO.filter((item) => item.filter === filterKey);
-
-      grid.innerHTML = filtered
-        .map((reel, idx) => {
-          const statsHtml =
-            reel.featured && (reel.views || reel.likes)
-              ? `<div class="reel-stats-row">
-                  ${reel.views ? `<span class="reel-stat-chip">${reel.views}</span>` : ''}
-                  ${reel.likes ? `<span class="reel-stat-chip">${reel.likes}</span>` : ''}
-                </div>`
-              : '';
-
-          return `
-          <article class="work-card ${reel.featured ? 'work-card--featured' : ''} spotlight-card" data-tilt data-cursor="REEL" style="animation-delay: ${idx * 0.07}s">
-            <a href="${reel.url}" target="_blank" rel="noopener noreferrer" class="work-visual ${reel.artClass}" aria-label="Watch ${reel.title} on Instagram">
-              <span class="visual-index mono-tag">${reel.index}</span>
-              <span class="reel-type-pill">${reel.category}</span>
-              <span class="reel-play-badge" aria-hidden="true">▶</span>
-            </a>
-            <div class="work-meta">
-              <div class="work-meta-top">
-                <h3>${reel.title}</h3>
-                <span class="mono-tag">${reel.date}</span>
-              </div>
-              ${statsHtml}
-              <p>${reel.description}</p>
-              <div class="work-actions">
-                <button type="button" class="reel-action-btn" data-preview-id="${reel.id}" data-cursor="PREVIEW">
-                  Preview Embed
-                </button>
-                <a href="${reel.url}" target="_blank" rel="noopener noreferrer" class="reel-ext-link" data-cursor="OPEN">
-                  Instagram <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        `;
-        })
-        .join('');
-
-      grid.querySelectorAll('[data-preview-id]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const id = btn.getAttribute('data-preview-id');
-          const reel = REELS_PORTFOLIO.find((r) => r.id === id);
-          if (reel) openReelModal(reel);
-        });
-      });
-
-      bindSpotlightsAndTilt(grid);
-      updateCursorTargets(grid);
-    }
-
-    renderCards('all');
-
-    if (filterBar) {
-      filterBar.querySelectorAll('.filter-btn').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          filterBar.querySelectorAll('.filter-btn').forEach((b) => {
-            b.classList.remove('is-active');
-            b.setAttribute('aria-selected', 'false');
-          });
-          btn.classList.add('is-active');
-          btn.setAttribute('aria-selected', 'true');
-          renderCards(btn.getAttribute('data-filter') || 'all');
-        });
-      });
-    }
-  }
-
-  /* ----------------------------------------------------------
-     3. Preloader Curtain Sequence
+     2. Preloader Curtain Sequence
      ---------------------------------------------------------- */
   function runPreloader() {
     const preloader = document.getElementById('preloader');
@@ -722,7 +506,6 @@ const REELS_PORTFOLIO = [
   initAmbientCanvas();
   initCursorAndMagnetics();
   bindSpotlightsAndTilt(document);
-  initPortfolio();
   initScrollChoreography();
   initUtilities();
   runPreloader();
